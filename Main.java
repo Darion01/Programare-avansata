@@ -2,13 +2,15 @@
 package com.company;
 
 public class Main {
-    public Main() {
+    public static void main(String[] args) {
+        Main obj = new Main();
+        obj.run();
     }
 
-    public static void main(String[] args) {
+    private void run() {
         int s;
         System.out.println("Hello World");
-        String[] languages = {"C", "C++", "C#", "Python", "Go", "Rust", "JavaScript", "PHP", "Swift", "Java"};
+        String languages[] = {"C", "C++", "C#", "Python", "Go", "Rust", "JavaScript", "PHP", "Swift", "Java"};
         int n = (int) (Math.random() * 1_000_000);
         System.out.println(n);
         n = (n + 3 + 0b10101 + 0xFF)*6;
