@@ -6,7 +6,7 @@ import java.util.*;
 abstract public class Room {
 
     protected int size;
-    protected final String name;
+    protected String name;
 
     public Room(int size, String name) {
         this.size = size;
@@ -14,7 +14,6 @@ abstract public class Room {
     }
 
     public Room(){
-        this((int)(Math.random() * 10 + 10), "C" + (int)(Math.random()*300+100));
     }
 
     public void setSize(int size) {
@@ -29,6 +28,16 @@ abstract public class Room {
         return name;
     }
 
+    public static boolean addRoom(Room room1,List<Room> roomList)
+    {
+        for(Room temporary : roomList)
+        {
+            if(room1.equals(temporary))
+                return false;
+        }
+        roomList.add(room1);
+        return true;
+    }
 
     @Override
     public String toString() {
