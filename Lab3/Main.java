@@ -10,6 +10,7 @@ public class Main {
         Router router1 = new Router("tpLink", null,"Location1");
         Router router2 = new Router("netGear", null,"Location3");
         Switch switch1 = new Switch("Dlink", null);
+        Switch switch2 = new Switch("Tenda", null);
 
         myNetwork.addNodes(computer1);
         myNetwork.addNodes(computer2);
@@ -18,6 +19,8 @@ public class Main {
         myNetwork.addNodes(router2);
 
         myNetwork.addNodes(switch1);
+        myNetwork.addNodes(switch2);
+
 
         System.out.println(myNetwork);
 
