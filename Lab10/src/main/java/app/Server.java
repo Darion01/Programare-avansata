@@ -1,4 +1,4 @@
-package app;
+package Lab10.src.main.java.app;
 
 import java.io.IOException;
 import java.net.ServerSocket;
