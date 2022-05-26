@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Controller">
+    <top>
+        <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #1d3557;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Grid Size">
+                <font>
+                    <Font name="System Bold" size="32.0"/>
+                </font>
+            </Text>
+            <Spinner fx:id="rowsSpinner" prefHeight="45.0" prefWidth="96.0"/>
+            <Spinner fx:id="columnsSpinner" prefHeight="45.0" prefWidth="96.0"/>
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#createGrid" prefHeight="45.0"
+                    prefWidth="82.0" style="-fx-background-color: #00A8A8;" text="Create"/>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #1d3557;" BorderPane.alignment="CENTER">
+            <opaqueInsets>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </opaqueInsets>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Button fx:id="saveButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="82.0"
+                    style="-fx-background-color: #00A8A8;" text="Save"/>
+            <Button fx:id="loadButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="82.0"
+                    style="-fx-background-color: #00A8A8;" text="Load"/>
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#quitGame" prefHeight="45.0" prefWidth="82.0"
+                    style="-fx-background-color: #00A8A8;" text="Exit"/>
+        </HBox>
+    </bottom>
+    <left>
+        <Pane prefWidth="75.0" style="-fx-background-color: #27436b;" BorderPane.alignment="CENTER" />
+    </left>
+    <right>
+        <Pane prefWidth="75.0" style="-fx-background-color: #27436b;" BorderPane.alignment="CENTER" />
+    </right>
+    <center>
+        <Pane fx:id="gameCanvas" BorderPane.alignment="CENTER" />
+    </center>
+</BorderPane>
